@@ -18,12 +18,12 @@ class UsersController < ApplicationController
     end
   end
   
-  def edit
-    
+  def followings
+    @followings = users.following_relationships
   end
   
-  def update
-    
+  def followers
+    @followers = users.follower_relationships
   end
   
   private
