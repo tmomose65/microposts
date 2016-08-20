@@ -1,0 +1,21 @@
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+      <span>
+          Following：
+          <a href="<%= followings_path %>">
+             <%= current_user.following_relationships.count %>
+          </a>
+        </span>
+        <span>
+          Follower：
+          <a href="<%= followers_path %>">
+            <%= current_user.follower_relationships.count %>
+          </a>
+        </span>
+    </section>
+  </aside>

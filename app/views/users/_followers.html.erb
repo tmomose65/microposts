@@ -1,0 +1,8 @@
+<% current_user.follower_users.each do |follower_user| %>
+  <ol>
+   <h1>
+      <%= gravatar_for follower_user %>
+      <%= follower_user.name %>
+   </h1>
+  </ol>
+<% end %>

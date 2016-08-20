@@ -19,11 +19,13 @@ class UsersController < ApplicationController
   end
   
   def followings
-    @followings = users.following_relationships
+    @user = current_user
+    @followings = @user.following_users
   end
   
   def followers
-    @followers = users.follower_relationships
+    @user = current_user
+    @followers = @user.follower_users
   end
   
   private
