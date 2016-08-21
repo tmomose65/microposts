@@ -1,7 +1,9 @@
 <div class="row">
   <%= render 'user_status' %>
-  <div class="col-md-8 col-sm-4">
+  <div class="col-md-8 col-sm-8">
     <h3>following</h3>
-    <%= render 'followings' %>
+    <ul class="list-group" style="list-style:none;">
+      <%= render 'followings' %>
+    </ul>
   </div>
 </div>

@@ -1,8 +1,6 @@
-<% current_user.following_users.each do |following_user| %>
-<ol>
-  <h1>
-    <%= gravatar_for following_user %>
-    <%= following_user.name %>
-  </h1>
-</ol>
+<% @followings.each do |following| %>
+<li class="list-group-item">
+  <%= gravatar_for(following, size: 60)%>
+  <h2><%= following.name %></h2>
+</li>
 <% end %>
