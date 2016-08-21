@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
     if logged_in?
       @micropost = current_user.microposts.build
       @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
-      @feeds = Micropost.page(params[:page])
+      @feeds = current_user.feed_items.includes(:user).page
     end
   end
 end

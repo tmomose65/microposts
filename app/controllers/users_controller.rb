@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.order(created_at: :desc)
+    @microposts_page = @user.microposts.page
   end
   
   def create
@@ -19,11 +20,9 @@ class UsersController < ApplicationController
   end
   
   def edit
-    
   end
   
-  def update
-    
+  def updat
   end
   
   private
