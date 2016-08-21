@@ -34,4 +34,7 @@ class User < ActiveRecord::Base
     Micropost.where(user_id: following_user_ids + [self.id])
   end
   
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+    validates :place, presence: true
+    validates :message,presence: true, length: {maximum: 255 }, allow_nil: true
 end
