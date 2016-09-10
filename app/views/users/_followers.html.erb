@@ -1,0 +1,6 @@
+<% @followers.each do |follower| %>
+<li class="list-group-item">
+  <%= gravatar_for(follower, size: 60)%>
+  <h2><%= follower.name %></h2>
+</li>
+<% end %>
